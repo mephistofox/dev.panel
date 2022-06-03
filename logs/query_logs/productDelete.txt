@@ -1,0 +1,32 @@
+DELETE FROM code WHERE tire = '5' AND payer = '2'
+condition is false
+ name => tire, payer => 0 
+DELETE FROM code WHERE tire = '4' AND payer = '2'
+condition is false
+ name => tire, payer => 0 
+DELETE FROM code WHERE tire = '3' AND payer = '2'
+condition is false
+ name => tire, payer => 0 
+DELETE FROM code WHERE tire = '2' AND payer = '2'
+condition is false
+ name => tire, payer => 0 
+DELETE FROM code WHERE tire = '1' AND payer = '2'
+condition is false
+ name => tire, payer => 0 
+DELETE FROM code WHERE tire = '6' AND payer = '2'
+DELETE FROM code WHERE tire = '7' AND payer = '2'
+DELETE FROM code WHERE tire = '12' AND payer = '2'
+DELETE FROM code WHERE tire = '11' AND payer = '2'
+DELETE FROM code WHERE tire = '10' AND payer = '2'
+DELETE FROM code WHERE tire = '9' AND payer = '2'
+DELETE FROM code WHERE tire = '8' AND payer = '2'
+DELETE FROM code WHERE tire = '13' AND payer = '2'
+DELETE FROM code WHERE tire = '14' AND payer = '2'
+DELETE FROM code WHERE tire = '15' AND payer = '2'
+DELETE FROM code WHERE tire = '17' AND payer = '2'
+DELETE FROM code WHERE tire = '18' AND payer = '2'
+DELETE FROM code WHERE tire = '19' AND payer = '2'
+DELETE FROM code WHERE tire = '20' AND payer = '2'
+DELETE FROM code WHERE tire = '23' AND payer = '2'
+DELETE FROM code WHERE tire = '29' AND payer = '1'
+DELETE FROM code WHERE tire = '24' AND payer = '2'

@@ -1,0 +1,21 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ "https://mdxv.store/cp" [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+
+
+</IfModule>
+
+Options -Indexes
+
+Redirect /admin/index.php /admin/index/

@@ -1,0 +1,19 @@
+<div id = "transactions_head">
+    <div id = "transactions_head_settings" onClick = "windowColumnSettings(7);"></div>
+    <span>Кассовые операции</span>
+    %BASES%
+    <div id = "transactions_head_dates">
+        <item data = '1' onClick = 'transactionsDateTypeChange(this);'>Месяц</item>
+        <item data = '2' onClick = 'transactionsDateTypeChange(this);'>Вчера</item>
+        <item data = '3' onClick = 'transactionsDateTypeChange(this);'>Сегодня</item>
+        <div id = "calendar_1"></div>
+        <span>—</span>
+        <div id = "calendar_2"></div>
+    </div>
+</div>
+<div id = "transactions_body">
+    <div id = "transactions_body_head">
+        %HEAD%
+    </div>
+    <div id = "transactions_body_list"></div>
+</div>

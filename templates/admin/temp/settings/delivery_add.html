@@ -1,0 +1,11 @@
+<div class = "s_delivery_item">
+    <tname>Название</tname>
+    <input type = "text" class = "input height-23" style = 'width: 208px;' id = "name" onKeyUp = "deleteBorderRed(this);">
+</div><br>
+<div class = "s_delivery_item">
+    <tname>Адрес</tname>
+    <input type = "text" class = "input height-23" style = 'width: 404px;' id = "address" onKeyUp = "deleteBorderRed(this);addressList(this);">
+    <list id = "address_list"></list>
+</div>
+<br>
+<div class = "button_green inline button_small" onClick = "settingsDeliveryAdd();buttonClick(this);">Добавить</div>

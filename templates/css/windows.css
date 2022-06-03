@@ -1,0 +1,153 @@
+#window_background {
+    position: fixed;
+    background: rgba(128, 128, 128, 0.8);
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    display: none;
+    z-index: 10000;
+}
+    .window_close {
+        width: 21px;
+        height: 21px;
+        background-image: url(../../../templates/img/black_cross.png);
+        background-size: cover;
+        float: right;
+        cursor: pointer;
+        margin-top: 3px;
+    }
+    .window_head {
+        font-size: 24px;
+        color: #4A4A4A;
+    }
+
+    #window_1 {
+        position: fixed;
+        min-width: 420px;
+        border-radius: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: calc((100vw - 490px)/2);
+        margin-top: 300px;
+        display: none;
+        z-index: 10002;
+        background-color: white;
+    }
+        #window_1_head {
+
+        }
+        #window_1_head > span {
+            font-style: italic;
+            margin-top: 10px;
+            display: block;
+        }
+
+        #window_1_footer {
+            font-size: 0;
+            margin-top: 40px;
+        }
+            #window_1_footer_left {
+                display: inline-block;
+                vertical-align: top;
+            }
+            #window_1_footer_right {
+                display: inline-block;
+                vertical-align: top;
+                float: right;
+            }
+    #window_2 {
+        position: fixed;
+        min-width: 420px;
+        height: 300px;
+        border-radius: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: calc((100vw - 490px)/2);
+        margin-top: 300px;
+        display: none;
+        z-index: 10002;
+        background-color: white;
+    }
+        #window_2_body {
+            margin-top: 20px;
+            font-size: 14px;
+            overflow-y: auto;
+            max-height: calc(100vh - 343px);
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #window_2_footer {
+            font-size: 0;
+            margin-top: 20px;
+        }
+    #window_3 {
+        position: fixed;
+        min-width: 490px;
+        border-radius: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: calc((100vw - 545px)/2);
+        margin-top: 100px;
+        display: none;
+        z-index: 10002;
+        background-color: white;
+    }
+        #window_3_head {
+            padding: 5px;
+        }
+            #window_3_head > span {
+                display: block;
+            }
+
+        #window_3_body {
+            margin-top: 10px;
+            font-size: 14px;
+            overflow-y: auto;
+            max-height: calc(100vh - 400px);
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding: 5px;
+        }
+        #window_3_footer {
+            font-size: 0;
+            margin-top: 20px;
+            padding: 5px;
+        }
+    #window_4 {
+        position: fixed;
+        width: 620px;
+        border-radius: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: calc((100vw - 690px)/2);
+        margin-top: 100px;
+        display: none;
+        z-index: 10002;
+        background-color: white;
+    }
+        #window_4_head {
+            padding: 5px;
+        }
+        #window_4_body {
+            margin-top: 10px;
+            font-size: 14px;
+            overflow-y: auto;
+            max-height: calc(100vh - 400px);
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding: 5px;
+        }
+        #window_4_footer {
+            font-size: 0;
+            margin-top: 20px;
+            padding: 5px;
+        }
+

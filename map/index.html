@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Движения</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/map/attention.css">
+  </head>
+  <body>
+    <template id="template-item">
+        <div id="{{movement.id}}" data-id="{{movement.id}}" data-type="{{movement.data}}" data-number="{{movement.index}}" data-deal="{{movement.deal}}" data-itemtype="{{movement.type}}" data-to="{{movement.to}}" data-from="{{movement.from}}" onclick="appendRoute(this)" class="item alert alert-custom input-group mb-3 item-active orig">
+            <div class="item-data" style="width:100%">
+                <span class="badge badge-warning item-type">{{movement.type}}</span>
+                <span class="badge item-date">{{movement.item_date}}</span>
+            </div>
+            <table style="font-size:10px">
+                <tr>
+                    <td class="attention-content-title item-index">Номер</td>
+                    <td>{{movement.index}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-deal">К заказу</td>
+                    <td>{{movement.deal}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-delivery">Транспортная</td>
+                    <td>{{movement.provider}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-from">Откуда</td>
+                    <td>{{movement.from}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-to">Куда</td>
+                    <td>{{movement.to}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-info">Инф.</td>
+                    <td>{{movement.info}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-info2">Доп инф.</td>
+                    <td>{{movement.info2}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-store">Склад</td>
+                    <td>{{movement.store}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-manager">Менеджер</td>
+                    <td>{{movement.manager}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-client">Клиент</td>
+                    <td>{{movement.client}}</td>
+                </tr>
+            </table>
+            <div class="alert alert-danger attention-items" style="text-align:left; padding: 2px 4px;">{{movement.items}}</div>
+        </div> 
+    </template>
+    <template id="template-route">
+        <li class="route alert alert-custom input-group mb-3 item-active" data-base="{{movement.base}}"  id="{{movement.id}}_temp" data-id="{{movement.id}}" data-type="{{movement.data}}" data-number="{{movement.index}}" data-deal="{{movement.deal}}" data-itemtype="{{movement.type}}" data-to="{{movement.to}}" data-from="{{movement.from}}">
+            <div class="remove" onclick="removeRoute(this)"></div>
+            <div class="item-data" style="width:100%">
+                <span class="badge badge-warning item-type">{{movement.type}}</span>
+                <span class="badge item-date">{{movement.item_date}}</span>
+            </div>
+            <table style="font-size:10px">
+                <tr>
+                    <td class="attention-content-title item-index">Номер</td>
+                    <td>{{movement.index}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-deal">К заказу</td>
+                    <td>{{movement.deal}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-delivery">Транспортная</td>
+                    <td>{{movement.provider}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-from">Откуда</td>
+                    <td>{{movement.from}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-to">Куда</td>
+                    <td>{{movement.to}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-info">Инф.</td>
+                    <td>{{movement.info}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-info2">Доп инф.</td>
+                    <td>{{movement.info2}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-store">Склад</td>
+                    <td>{{movement.store}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-manager">Менеджер</td>
+                    <td>{{movement.manager}}</td>
+                </tr>
+                <tr>
+                    <td class="attention-content-title item-client">Клиент</td>
+                    <td>{{movement.client}}</td>
+                </tr>
+            </table>
+            <div class="alert alert-danger attention-items" style="text-align:left; padding: 2px 4px;">{{movement.items}}</div>
+        </li<li class="route alert alert-custom input-group mb-3 item-active" > 
+    </template>
+    <template id="template-task">
+        <li class="route task alert alert-custom input-group mb-3 item-active" style="font-size: 10px;">
+            <table>
+                <tr>
+                    <td><span class="badge badge-warning item-type">Доп. задание</span></td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Адрес задачи</td>
+                    <td>{{movement.address}}</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Описание задачи</td>
+                    <td>{{movement.description}}</td>
+                </tr>
+            </table>
+        </li>
+    </template>
+    <template id="temp"></template>
+
+    <div class="container-fluid">
+        <!-- <div class="date-selector"></div> -->
+        <div class="row">
+            <div class="col-md-3 attention-col main">
+                <!-- Выбор бронь/движения, смена даты и выбор курьера  -->
+                <div class="btn-group" style="width: 100%;">
+                    <button type="button" class="btn btn-dark" onclick="$('#cureers').show();$('#managers').hide();loadItems()">Движения</button>
+                    <button type="button" class="btn btn-secondary" onclick="itemsLoadReserved()">Бронь</button>
+                    <button type="button" class="btn btn-secondary close" onclick="$('#datepicker').val('today');loadItems()"><span aria-hidden="true">🔃</span></button>
+                    <input type="hidden" id="datepicker" value="today" onchange="loadItems()">
+                </div>
+                <div class="input-group" style="margin-top: 4px;">
+                    <select id="cureers" name="cureer" class="custom-select" onchange="$('.cureer').text($('select').val()); if($('select').val()!='Не закреплён'){$(this).css('background-color','#cdfcb9')}else{$(this).css('background-color','#fff')};loadItems();">
+                        <option default value="Не закреплён" style="visibility: hidden;">Выбрать курьера</option>
+                    </select>
+                </div>
+            </div>
+                <div class="col-md-3 attention-col">
+                    <ul id="sortable">
+                        
+                    </ul>
+                    <div class="btn-group" style="width: 100%;">
+                        <button class="btn btn-success btn-lg" style="width: 100%; margin-top: 2px;" onclick="window.setTmpMovements()">Сохранить</button>
+                        <button class="btn btn-danger btn-lg" style="width: 100%; margin-top: 2px;" onclick="$('#confirmDialog').dialog({'width':'730px'})">Утвердить маршрут</button>
+                    </div>
+                    <div class="btn-group" style="width: 100%;">
+                        <button class="btn btn-success" style="width: 100%; margin-top: 2px;" data-toggle="modal" data-target="#exampleModalCenter">Задача ➕</button>
+                        <button class="btn btn-success btn-lg" style="width: 100%; margin-top: 2px;" onclick="window.printRoute()">Распечатать</button>
+                        <button class="btn btn-success btn-lg" style="width: 100%; margin-top: 2px;" onclick="createTireLoadList()">К загрузке</button>
+                    </div>            
+            </div>
+            <div id="dialog" title="ВНИМАНИЕ!" style="display: none;">
+                <h4 class="alert alert-warning">Для сохранения маршрута необходимо выбрать курьера!</h4>
+            </div>
+
+            <div id="confirmDialog" title="ВНИМАНИЕ!" style="display: none;">
+                <h4 class="alert alert-success"><center>Утвердить маршрут?</center></h4>
+                <div class="btn-group" style="width: 100%;">
+                    <button class="btn btn-success" onclick="setCureer();$('#confirmDialog').dialog('close');$('#sortable').html('')">Да</button>
+                    <button class="btn btn-danger" onclick="$('#confirmDialog').dialog('close')">Нет</button>
+                </div>
+            </div>
+
+            <div id="saveDialog" title="ВНИМАНИЕ!" style="display: none;">
+                <h4 class="alert alert-success"><center>Маршрут сохранен!</center></h4>
+            </div>
+            <div class="task-create">
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Добавить задачу</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <label class="font-weight-bold" for="address">Адрес задачи</label>
+                            <br>
+                            <div id="sa_poluch_dop" style="position: relative;">
+                                <input list="address_list" class="task-address" style="width: 100%; border:none; background-color: #ECECEC; resize:none; border-radius:4px; padding: 4px 8px;" id="address" class="input height-23" name="address" type="text" onkeyup="addressList(this)" placeholder="Адрес">
+                                <list id="address_list" style="position:absolute; z-index:99999; background-color:#fff; left:0; top: 32px"></list>
+                            </div>
+                            <br>
+                            <label class="font-weight-bold" for="description">Описание задачи</label>
+                            <textarea name="description" id="description" calss="task-description" style="border:none; width: 100%; height:250px; background-color: #ECECEC; resize:none; border-radius:4px; padding: 4px 8px;"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                          <button type="button" class="btn btn-primary task-route" onclick="window.addTask()" data-dismiss="modal">Добавить задачу</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6 attention-col" id="map">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru-RU&apikey=4280c083-e2dc-4345-b347-7a13d40bc5d2" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://mdxv.store/templates/script/default.js"></script>
+    <script src="/map/app3.js?v=1.1.1.3"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<div id = "sa_head">
+    <input type = "text" class = "input height-28" style = "width: 268px;" placeholder = "Штрих-код или артикул" id = "barcode" onKeyUp = "deleteBorderRed(this); salesBarcodeProof(this);">
+    <barcode></barcode>
+    <div onClick = "salesAddProductAdd();" class = "button button_green button_extra_small" style = "float: right; display: none;">Добавить</div>
+</div>
+<div id = "sa_payers">
+    <div id = "sa_payer_1">
+        <span>Продавец</span>
+        %PAYER_1%
+    </div>
+    <div id = "sa_payer_2">
+        <span>Плательщик в накладной</span>
+        %PAYER_2%
+    </div>
+</div>
+<div id = "sa_products"></div>
+<div id = "sa_price"></div>
+<div id = "sa_poluch">
+    <span>Получение</span>
+    <div class = "select_base">
+        <div class = 'select' style = 'width: 167px;' id = 'poluch'>
+            <arrow></arrow>
+            <headline>Выбрать</headline>
+            <input type = 'hidden' id = 'poluch_hidden' value = '-1'>
+            <div data = "1" onClick = "salesAddPoluch(1);">Пункт выдачи</div>
+            <!--<div data = "2" onClick = "salesAddPoluch(2);">В местах хранения</div>  -->
+            <div data = "3" onClick = "salesAddPoluch(3);">Доставка</div>
+            <div data = "4" onClick = "salesAddPoluch(4);">Доставка ТК</div>
+        </div>
+    </div>
+    <div id = "sa_poluch_dop"></div>
+</div>
+<div id = "sa_date">
+    <span>Дата сделки</span>
+    %DATE%
+</div>
+<div id = "sa_client">
+    <span>Клиент</span>
+    %CLIENT%
+</div>
+<div id = "sa_cureer">
+    <span>Курьер</span>
+    %CUREER%
+</div>
+<div id = "sa_info">
+    <br>
+    <label for="inform"><b>Информация по заказу</b></label>
+    <textarea id="inform" name="inform" style="background-color: #ECECEC; width:250px; height: 70px; resize:none; margin-left:20px; border-radius:4px; padding: 4px 8px;"></textarea>
+</div>
+<br>

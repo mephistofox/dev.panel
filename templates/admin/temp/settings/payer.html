@@ -1,0 +1,17 @@
+<div class = "s_provider_item">
+    <tname>Название</tname>
+    <input type = "text" class = "input height-23" id = "name" value = "%NAME%" onKeyUp = "deleteBorderRed(this);" />
+</div>
+<div class = "s_provider_item">
+    <tname>Коды маркировки</tname>
+    <div id = "tumbler_1" class = "tumbler %TUMBLER%" onClick = "tumblerChange(1);">
+        <div class = "tumbler_left"></div>
+        <div class = "tumbler_right"></div>
+        <div class = "tumbler_circle"></div>
+    </div>
+</div>
+<div class = "s_provider_item">
+    <tname>ИНН</tname>
+    <input type = "text" class = "input height-23" id = "inn" value = "%INN%" onKeyUp = "deleteBorderRed(this);" />
+</div>
+<div class = "button_green inline button_small" onClick = "settingsPayerChange(%ID%);buttonClick(this);">Сохранить</div>

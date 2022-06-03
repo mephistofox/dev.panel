@@ -1,0 +1,20 @@
+<div id = "cash_default">
+    %BASES%
+    <div id = "cd_smena" class = "cs_start_hidden">Рабочая смена</div>
+    <div id = "cd_time">
+        <div id = "cd_time_date">%DATE%</div>
+        <div id = "cd_time_time"></div>
+    </div>
+    <div id = "cd_raz" class = "cs_start_hidden">
+        <title>Размен</title>
+        <input type = "text" id = "cd_razmen" class = "number" autocomplete = "off" value = "0" /> ₽
+    </div>
+    <div id = "cd_name" class = "cs_start_hidden">%NAME%</div>
+    <div id = "cd_current_base" class = "cs_start_hidden">%BASE%</div>
+    <div id = "cd_pas" class = "cs_start_hidden">
+        <title>Пароль</title>
+        <input type = "password" id = "cd_password" autocomplete = "off" onKeyUp = "deleteBorderRed(this);" />
+    </div>
+    <div id = "cd_button_1" onClick = "cashDefault();" class = "button button_green">Открыть смену</div>
+    <div id = "cd_button_2" onClick = "cashOpen();" class = "button button_green cs_start_hidden">Открыть</div>
+</div>

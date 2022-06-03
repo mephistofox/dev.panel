@@ -1,0 +1,143 @@
+/* CSS HEX */
+:root {
+    --tufts-blue: #3c91e6ff;
+    --white: #fefeffff;
+    --forest-green-crayola: #57a773ff;
+    --raisin-black: #22181cff;
+    --sizzling-red: #ff2c55ff;
+}
+#sort {
+    background-color: #fff;
+}
+.sort-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sort-btn svg {
+    width: 18px;
+    height: 18px;
+    align-items: center;
+}
+
+.sort-btn {
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+}
+
+.sort-btn span {
+    margin-left: 8px;
+    align-items: center;
+}
+
+.sort-btn input {
+    align-items: center;
+    margin: 4px 0px 0px 4px;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    accent-color: #dcdcdc;
+    border-radius: 100% !important;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fcfcfc;
+    border: 1px solid #1E2834;
+}
+
+.sort-btn input:checked {
+    background-color: #ececec;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10.4" height="8"><path d="M10.4 1.6c0-.2-.1-.3-.2-.5L9.3.2C9.2.1 9 0 8.8 0c-.1 0-.3.1-.4.2L4 4.6l-2-2c-.1-.1-.3-.2-.4-.2-.2 0-.3.1-.5.2l-.9.9c-.1.1-.2.3-.2.5s.1.3.2.5l2.4 2.4.9.9c.1.1.3.2.5.2s.3-.1.5-.2l.9-.9L10.2 2c.1-.1.2-.3.2-.4z"/></svg>');
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+select {
+    border-radius: 0px !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.bi-cart3 {
+    color: var(--tufts-blue);
+}
+
+#sort {
+    position: fixed;
+    top: -200px;
+    transition: all ease-in-out .2s;
+    width: 100%;
+    z-index: 99999;
+}
+
+.show-sort {
+    top: 0 !important;
+}
+
+h5 {
+    font-family: 'Roboto Slab', serif !important;
+}
+
+small {
+    font-family: 'Istok Web', sans-serif !important;
+}
+
+.menu {
+    display: block;
+    width: 100% !important;
+    height: 50px !important;
+    background-color: #1E2834;
+}
+
+.nav-link {
+    color: aliceblue !important;
+}
+
+.quantity_inner * {
+    outline: none !important;
+    text-align: center;
+}
+
+.quantity_inner .quantity {
+    width: 20px;
+    height: 30px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.bt_minus,
+.bt_plus,
+.bt_buy,
+.quantity {
+    border: none;
+    border-top: 2px solid #FF2C55;
+    border-bottom: 2px solid #FF2C55;
+}
+.quantity {
+    width: 24px !important;
+}
+.bt_minus,
+.bt_plus {
+    background-color: #fff;
+    color: #FF2C55;
+    font-weight: bold;
+    align-items: center;
+    width: 30px;
+}
+
+.bt_minus {
+    border-radius: 30px 0px 0px 30px;
+    border-left: 1px solid #FF2C55;
+}
+
+.bt_plus {
+    border-radius: 0px 30px 30px 0px;
+    border-right: 1px solid #FF2C55;
+}

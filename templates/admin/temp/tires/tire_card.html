@@ -1,0 +1,79 @@
+<div id = "sc_redact" onClick = "windowTireRedact(%ID%, %PAYER_ID%);">Редактировать</div>
+<div id = "product_delete" onClick = "questionDelete(1);">Удалить</div>
+<div id = "sc_changelog" onClick = "viewCustomTireLogs('%ID%')">Логи</div>
+<div id = "product_delete_2">Точно удалить? <span onClick = "productDelete(%ID%, 1, %PAYER_ID%);">Да</span> <span onClick = "questionDelete(0);">Нет</span></div>
+<div id = "sc_name">%SIZE%</div>
+<div id="tireCommon" style="display: block">
+    <div id = "product_other_title" onClick = "productOtherShow();">%OTHER_TITLE%</div><br>
+    <div id = "product_other">%OTHER%</div>
+    <div id = "product_photo_title" onClick = "productPhotoShow();">%PHOTO_TITLE%</div>
+    <div id = "product_photos">%PHOTOS%</div>
+    <div class = "sc_str">
+        <title2>Артикул</title2>
+        <span>%ARTICLE%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Сезон</title2>
+        <span>%SEASON%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Размер</title2>
+        <span>%SIZE%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Производитель</title2>
+        <span>%BRAND%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Модель</title2>
+        <span>%MODEL%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>ИН</title2>
+        <span>%NAGR%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>ИС</title2>
+        <span>%RESIST%</span>
+    </div>
+    <div class = "sc_str_3">
+        <img src = "%IMG_RFT%" />
+        <img src = "%IMG_SPIKE%" />
+        <img src = "%IMG_CARGO%" />
+    </div>
+    <div class = "sc_head">Стоимость</div>
+    <div class = "sc_str_2">
+        <title2>Закупочная</title2>
+        <span id = "price_1">%PRICE_1%</span>
+        <redact onClick = "windowTirePriceRedact(%ID%, 1);">Править</redact>
+    </div>
+    <div class = "sc_str_2">
+        <title2>Оптовая</title2>
+        <span id = "price_3">%PRICE_3%</span>
+        <redact onClick = "windowTirePriceRedact(%ID%, 3);">Править</redact>
+    </div>
+    <div class = "sc_str_2">
+        <title2>Продажная</title2>
+        <span id = "price_2">%PRICE_2%</span>
+        <redact onClick = "windowTirePriceRedact(%ID%, 2);">Править</redact>
+    </div>
+    <div id = "tire_count">
+        <div id = "tire_count_str">
+            <span>Количество</span>
+            <span1>%COUNT_TIRE%</span1>
+        </div>
+        %NALICHIE%
+    </div>
+</div>
+%PAYER%
+<div id="tireLogs" style="display: none">
+    <div class="customLogsViewWindow">
+        <div class="customLogsHeader">
+            <h4>Журнал операций</h4>
+        </div>
+        <div class="customLogsBody" id="customLogsBody">
+
+        </div>
+
+    </div>
+</div>

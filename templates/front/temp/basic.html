@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>%TITLE%</title>
+    <meta name = "author" content = "Богатырёв Денис">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+    <meta name = "description" content = "Шины">
+    <link rel = "shortcut icon" href = "%SERVER%templates/img/icon.png" type = "image/png">
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/css/normalize.css" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/css/default.css?3f" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/front/css/basic.css" />
+    <!--<link rel = "stylesheet" type = "text/css" media = "(min-width: 1200px) and (max-width: 1849px)" href = "%SERVER%templates/front/css/1200.css" />
+    <link rel = "stylesheet" type = "text/css" media = "(min-width: 922px) and (max-width: 1199px)" href = "%SERVER%templates/front/css/922.css" />
+    <link rel = "stylesheet" type = "text/css" media = "(min-width: 768px) and (max-width: 921px)" href = "%SERVER%templates/front/css/768.css" />
+    <link rel = "stylesheet" type = "text/css" media = "(max-width: 767px)" href = "%SERVER%templates/front/css/481.css" /> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "%SERVER%templates/script/default.js"></script>
+    <script src = "%SERVER%templates/front/script/basic.js"></script>
+    <script src = "%SERVER%templates/script/jquery.maskedinput.min.js"></script>
+    %HEAD%
+</head>
+
+<body>
+    <div id = "windows">
+        <div id = "window_background" onClick = "closeWindow();"></div>
+        <div id = "window_1" class = "windows">
+            <div class = "window_close" onClick = "closeWindow();"></div>
+            <div id = "window_1_head" class = "window_head"></div>
+            <div id = "window_1_footer">
+                <div id = "window_1_footer_left"></div>
+                <div id = "window_1_footer_right"></div>
+            </div>
+        </div>
+    </div>
+    <div id = "backbone">%BASE%</div>
+    <script>
+        $(window).bind("load", function() {%SCRIPT%});
+    </script>
+</body>
+
+</html>

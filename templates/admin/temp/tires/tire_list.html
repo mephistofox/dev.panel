@@ -1,0 +1,97 @@
+<style>
+    .changeColor{
+        transition: all ease-in-out .2s;
+        background: linear-gradient(180deg, rgb(239, 238, 72,.8) 0%, rgb(239, 238, 72,1) 100%) !important;
+    }
+    .form-check-label{
+        transition: all ease-in-out .2s;
+        background: #5f9ea0;
+        background: linear-gradient(180deg, rgb(213, 234, 143,.8) 0%, rgb(203, 228, 122) 100%);
+    }
+    .form-check-label:hover{
+        box-shadow: none !important;
+    }
+    .selectors{
+        display: inline-block;
+        padding-left: 16px;
+        outline: none;
+    }
+    select{
+        text-align: center; 
+        border: none !important;
+    }
+    select:focus{
+        outline: none;
+        background: linear-gradient(180deg, rgb(213, 234, 143,.8) 0%, rgb(203, 228, 122) 100%);
+    }
+    select:hover{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0);
+        transition: all ease-in-out .2s;
+    }
+    .select-size{
+        display: inline-block;
+        width: 100px;
+        height: 36px;
+        font-weight: bold;
+        border-radius: 5px;
+        background: linear-gradient(180deg, #EEEEEE 0%, #D8D8D8 100%);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .hide-option{
+        visibility: hidden;
+    }
+    .btn {
+        background: linear-gradient(180deg, #ff7675 0%, #fa5151 100%) !important;
+        border: none !important;
+        width: 39px;
+        padding: 0px 3px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0);
+        transition: all ease-in-out .2s;
+    }
+    .page {
+        background: linear-gradient(180deg, rgb(239, 238, 72,.8) 0%, rgb(239, 238, 72,1) 100%) !important;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: all ease-in-out .2s;
+        width: 28px;
+        height: 28px;
+        margin: 8px 4px 8px 4px;
+    }
+    .page:hover, .page.active{
+        background: linear-gradient(180deg, rgba(196, 196, 58, 0.8) 0%, rgb(202, 202, 61) 100%) !important;
+    }
+</style>
+
+<div id = "tires_head">
+    <div id = "tires_head_settings" onClick = "windowColumnSettings(2);"></div>
+    <div id = "tires_head_add" onClick = "windowReceiptAdd(1);"></div>
+    <div id = "tires_head_down" onClick = "windowDownAdd(1);"></div>
+    <div class="selectors">
+        <select name="width" class="select-size" id="width-select" onchange="$('#w > input').val($(this).val());search($('#w > input').val(),$('#h > input').val(),$('#r > input').val());"><option default class="hide-option" value="-1">Ширина</option><option data="155" value="155">155</option><option data="165" value="165">165</option><option data="175" value="175">175</option><option data="185" value="185">185</option><option data="195" value="195">195</option><option data="205" value="205">205</option><option data="215" value="215">215</option><option data="225" value="225">225</option><option data="235" value="235">235</option><option data="245" value="245">245</option><option data="255" value="255">255</option><option data="265" value="265">265</option><option data="275" value="275">275</option><option data="285" value="285">285</option><option data="295" value="295">295</option><option data="305" value="305">305</option><option data="315" value="315">315</option><option data="325" value="325">325</option><option data="335" value="335">335</option><option data="35" value="35">35</option><option data="31" value="31">31</option></select>
+        <select name="height" class="select-size" id="height-select" onchange="$('#h > input').val($(this).val());search($('#w > input').val(),$('#h > input').val(),$('#r > input').val());"><option default class="hide-option" value="-1">Высота</option><option data="25" value="25">25</option><option data="30" value="30">30</option><option data="35" value="35">35</option><option data="40" value="40">40</option><option data="45" value="45">45</option><option data="50" value="50">50</option><option data="55" value="55">55</option><option data="60" value="60">60</option><option data="65" value="65">65</option><option data="70" value="70">70</option><option data="75" value="75">75</option><option data="80" value="80">80</option><option data="85" value="85">85</option><option data="90" value="90">90</option><option data="100" value="100">100</option><option data="12.5" value="12.5">12.5</option><option data="10.5" value="10.5">10.5</option></select>
+        <select name="radius" class="select-size" id="radius-select"  onchange="$('#r > input').val($(this).val().replace('R',''));search($('#w > input').val(),$('#h > input').val(),$('#r > input').val());"><option default class="hide-option" value="-1%-%">Радиус</option><option data="13" value="13%-%">13</option><option data="14" value="14%-%">14</option><option data="15" value="15%-%">15</option><option data="16" value="16%-%">16</option><option data="16C" value="16%-%">16C</option><option data="17" value="17%-%">17</option><option data="18" value="18%-%">18</option><option data="19" value="19%-%">19</option><option data="20" value="20%-%">20</option><option data="21" value="21%-%">21</option><option data="22" value="22%-%">22</option><option data="23" value="23%-%">23</option></select>   
+        <button name="button" class="select-size btn" onclick="tiresStart();$('#width-select').val('Ширина');$('#height-select').val('Высота');('#radius-select').val('Радиус')"><img src="/icon.png?1" width="60%" alt="" ></button>
+    </div>
+    <input style="display:none;" type="checkbox" class="form-check-input" onchange="hideZeroPositions(this);" name="sort" id="sort">
+    <div style="display: inline-block; padding-right:18px; float:right;"><label for="sort" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);cursor:pointer;line-height:36px;font-weight:bold;border-radius:5px; height:13px; display: inline-block; height:35px; text-align:center; vertical-align:middle;padding-top:2px; padding-left:12px;padding-right:12px;" class="form-check-label">
+        <span style="user-select:none;font-weight:bold;cursor:pointer;">Скрыть меньше 4</span>
+    </label></div>
+</div>
+<div id = "tires_body">
+    <div id = "tires_body_head">
+        %HEAD%
+    </div>
+    <div id = "tires_body_list"></div>
+</div>
+<div id="paginate" class="btn-group" role="group"></div>
+<script>
+    $(function(){
+        paginator()
+        $('#tires_body_head').html($('#tires_body_head').html().replace("Артикул <triangle></triangle></div>","Артикул <triangle></triangle></div><input class = 'but_empty' onchange='searchByText(this)' id='tire-search' style = 'width: 370px;' placeholder='Название'>"))
+    })
+</script>

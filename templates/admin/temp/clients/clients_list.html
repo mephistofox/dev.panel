@@ -1,0 +1,36 @@
+<div id = "clients_head">
+    <div id = "clients_head_list">%HEAD_LIST%</div>
+    <div id = "clients_head_add" onClick = "windowClientAdd();"></div>
+    <input type = "text" id = "clients_head_phone" onKeyUp = "searchByText(this);" placeholder = "Телефон" />
+</div>
+<div id = "clients_body">
+    <div id = "clients_body_head">
+        <input type = "text" class = "input height-23" onKeyUp = "clientsSearch();" style = "width: 187px;" id = "name"    placeholder = "Имя" />
+        <input type = "text" class = "input height-23" onKeyUp = "clientsSearch();" style = "width: 133px;" id = "inn"     placeholder = "ИНН" />
+        <input type = "text" class = "input height-23" onKeyUp = "clientsSearch();" style = "width: 144px;" id = "mail"    placeholder = "Эл. почта" />
+        <input type = "text" class = "input height-23" onKeyUp = "searchByText(this);" style = "width: 144px;" id = "phone"    placeholder = "Телефон" />
+        <input type = "text" class = "input height-23" onKeyUp = "clientsSearch();" style = "width: 264px;" id = "address" placeholder = "Адрес доставки" />
+        <div class = "select" style = "width: 110px;" id = "opt">
+            <arrow></arrow>
+            <headline>Опт: все</headline>
+            <input type = "hidden" id = "opt_hidden" value = "0">
+            <div data = "0" onClick = "clientsSearch(0);">Опт: все</div>
+            <div data = "1" onClick = "clientsSearch(1);">Только опт</div>
+        </div>
+    </div>
+    <div id = "clients_body_list"></div>
+</div>
+<script>
+    function searchByText(e){
+        for (let index = 0; index < $('.phone').length; index++) {
+            const element = $('.phone')[index];
+            if ($(element)){
+                if ($(element).text().toLowerCase().search("\\"+$(e).val().toLowerCase()) == -1){
+                    $(element).parent().hide()
+                } else {
+                    $(element).parent().show()
+                }
+            }
+        }
+    }
+</script>

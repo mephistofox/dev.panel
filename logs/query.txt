@@ -1,0 +1,1 @@
+SELECT * FROM transactions WHERE id > 0 AND date >= 1653771600 AND date <= 1653858000 AND base = 0

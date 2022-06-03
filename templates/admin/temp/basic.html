@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>%TITLE%</title>
+    <meta name = "author" content = "Богатырёв Денис">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+    <meta name = "description" content = "Шины">
+    <link rel = "shortcut icon" href = "%SERVER%templates/img/icon.ico" type = "image/ico">
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/css/normalize.css?3" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/css/default.css?dвdddddddddddd" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/admin/css/basic.css?ffd" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/css/windows.css?ddddвdddd" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/admin/css/attention.css?fdfddddd" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/admin/css/movements.css?f" />
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/admin/css/sales.css?ddddddвdddddsddd" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAEGc-l9S5KFjdQwN5aDMUZkG-VkeLCVSg&libraries=&v=weekly'></script>
+    <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src = "%SERVER%templates/script/default.js?123"></script>
+    <script src = "%SERVER%templates/admin/script/basic.js?123"></script>
+    <script src = "%SERVER%templates/admin/script/attention.js"></script>
+    <script src = "%SERVER%templates/admin/script/movements.js"></script>
+    <script src = "%SERVER%templates/admin/script/sales.js?123"></script>
+    <script src = "%SERVER%templates/admin/script/cash.js?123"></script>
+    <script src = "%SERVER%templates/script/windows.js"></script>
+    <script src = "%SERVER%templates/script/jquery.maskedinput.min.js"></script>
+    <link rel = "stylesheet" href = "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src = "%SERVER%templates/script/print.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "%SERVER%templates/css/print.css?4" />
+    <script src = "%SERVER%templates/script/jquery.cookie.min.js"></script>
+    %HEAD%
+</head>
+
+<body>
+    <div id = "windows">
+        <div id = "window_background"></div>
+        <div id = "window_1" class = "windows">
+            <div class = "window_close" onClick = "closeWindow();"></div>
+            <div id = "window_1_head" class = "window_head"></div>
+            <div id = "window_1_footer">
+                <div id = "window_1_footer_left"></div>
+                <div id = "window_1_footer_right"></div>
+            </div>
+        </div>
+        <div id = "window_2" class = "windows">
+            <div class = "window_close" onClick = "closeWindow();"></div>
+            <div id = "window_2_body"></div>
+            <div id = "window_2_footer"></div>
+        </div>
+        <div id = "window_3" class = "windows">
+            <div class = "window_close" onClick = "closeWindow();"></div>
+            <div id = "window_3_head" class = "window_head"></div>
+            <div id = "window_3_linkbar"></div>
+            <div id = "window_3_body"></div>
+            <div id = "window_3_footer"></div>
+        </div>
+        <div id = "window_4" class = "windows">
+            <div id = "window_4_head" class = "window_head"></div>
+            <div id = "window_4_body"></div>
+            <div id = "window_4_footer"></div>
+        </div>
+    </div>
+    %MENU%
+    %ATTENTION%
+    <div id = "backbone">%BASE%</div>
+    <script>
+        $(window).bind("load", function() {%SCRIPT%});
+    </script>
+</body>
+
+</html>

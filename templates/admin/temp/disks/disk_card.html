@@ -1,0 +1,77 @@
+<div id = "sc_redact" onClick = "windowDiskRedact(%ID%);">Редактировать</div>
+<div id = "product_delete" onClick = "questionDelete(1);">Удалить</div>
+<div id = "sc_changelog" onClick = "viewCustomRimLogs('%ID%')">Логи</div>
+<div id = "product_delete_2">Точно удалить? <span onClick = "productDelete(%ID%, 2);">Да</span> <span onClick = "questionDelete(0);">Нет</span></div>
+<div id = "sc_name">%SIZE%</div>
+<div id="rimCommon" style="display: block">
+    <div id = "product_other_title" onClick = "productOtherShow();">%OTHER_TITLE%</div>
+    <div id = "product_other">%OTHER%</div><br>
+    <div id = "product_photo_title" onClick = "productPhotoShow();">%PHOTO_TITLE%</div>
+    <div id = "product_photos">%PHOTOS%</div>
+    <div class = "sc_str">
+        <title2>Артикул</title2>
+        <span>%ARTICLE%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Номенклатура</title2>
+        <span>%NOMENCLATURE%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Размер</title2>
+        <span>%SIZE%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Отверстий</title2>
+        <span>%HOLE%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Межболт</title2>
+        <span>%BOLT%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Вылет</title2>
+        <span>%VYLET%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Ступица</title2>
+        <span>%HUB%</span>
+    </div>
+    <div class = "sc_str">
+        <title2>Цвет</title2>
+        <span>%COLOR%</span>
+    </div>
+    <div class = "sc_head">Стоимость</div>
+    <div class = "sc_str_2">
+        <title2>Закупочная</title2>
+        <span id = "price_1">%PRICE_1%</span>
+        <redact onClick = "windowDiskPriceRedact(%ID%, 1);">Править</redact>
+    </div>
+    <div class = "sc_str_2">
+        <title2>Оптовая</title2>
+        <span id = "price_3">%PRICE_3%</span>
+        <redact onClick = "windowDiskPriceRedact(%ID%, 3);">Править</redact>
+    </div>
+    <div class = "sc_str_2">
+        <title2>Продажная</title2>
+        <span id = "price_2">%PRICE_2%</span>
+        <redact onClick = "windowDiskPriceRedact(%ID%, 2);">Править</redact>
+    </div>
+    <div id = "tire_count">
+        <div id = "tire_count_str">
+            <span>Количество</span>
+            <span1>%COUNT_TIRE%</span1>
+        </div>
+        %NALICHIE%
+    </div>
+</div>
+<div id="rimLogs" style="display: none">
+    <div class="customLogsViewWindow">
+        <div class="customLogsHeader">
+            <h4>Журнал операций</h4>
+        </div>
+        <div class="customLogsBody" id="customLogsBody">
+
+        </div>
+
+    </div>
+</div>

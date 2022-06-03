@@ -1,0 +1,30 @@
+<div id = "settings_season">
+    <div class = "settings_column_head">Шаблон договора сезонного хранения</div>
+    %FILE_NAME%
+    <input type = "file" id = "season_template" onChange = "docLoad(this, 1);" accept = ".docx" />
+    <label for = "season_template" id = "season_template_label">%FILE_ACTION%</label>
+
+    <div class = "ss_column">
+        <div class = "ss_column_head">Тег в тексте</div>
+        ${NUMBER}<br>
+        ${DATE}<br>
+        ${NAME}<br>
+        ${PRICE}<br>
+        ${DESC}<br>
+        ${DATEOFF}<br>
+        ${MONTH}<br>
+        ${MOBILE}<br>
+    </div>
+    <div class = "ss_column">
+        <div class = "ss_column_head">Значение</div>
+        Номер договора<br>
+        Дата начала хранения<br>
+        ФИО клиента<br>
+        Общая стоимость<br>
+        Описание шин и колес<br>
+        Дата окончания хранения<br>
+        Количество месяцев<br>
+        Мобильный телефон клиента<br>
+    </div>
+
+</div>

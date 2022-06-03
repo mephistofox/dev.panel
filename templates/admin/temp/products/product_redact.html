@@ -1,0 +1,37 @@
+<div class = "pa_str">
+    <title2>Артикул</title2>
+    <span>%PRODUCT_ARTICLE%</span>
+</div>
+<div class = "pa_str">
+    <title2>Фотографии</title2>
+    <photoAdd onClick = "windowPositionPhoto(3);">Добавить фото</photoAdd>
+</div>
+<div class = "pa_str">
+    <title2>Наименование</title2>
+    <input type = "text" value = "%NAME%" class = "input height-28" id = "product_name" onKeyUp = "deleteBorderRed(this);" style = "width: 204px;" />
+</div>
+<div class = "pa_str">
+    <title2>Параметры</title2>
+    <input type = "text" value = "%PARAMS%" class = "input height-28" id = "product_params" onKeyUp = "deleteBorderRed(this);" style = "width: 204px;" />
+</div>
+<div class = "pa_str">
+    <title2>Примечание</title2>
+    <textarea class = "textarea" id = "product_note" onKeyUp = "deleteBorderRed(this);">%NOTE%</textarea>
+</div>
+<div class = "pa_str">
+    <title2><b>Стоимость</b></title2>
+    <div class = "right">
+        <div class = "right_item">
+            <name>Закупочная</name>
+            <input value = "%PRICE_1%" type = "text" class = "input height-28" id = "price_purchase" onKeyUp = "deleteBorderRed(this);" />
+        </div>
+        <div class = "right_item">
+            <name>Оптовая</name>
+            <input value = "%PRICE_3%" type = "text" class = "input height-28" id = "price_wholesale" onKeyUp = "deleteBorderRed(this);" />
+        </div>
+        <div class = "right_item">
+            <name>Продажная</name>
+            <input value = "%PRICE_2%" type = "text" class = "input height-28" id = "price_sale" onKeyUp = "deleteBorderRed(this);" />
+        </div>
+    </div>
+</div>

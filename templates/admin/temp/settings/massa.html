@@ -1,0 +1,31 @@
+<div id = "settings_massa">
+    <div class = "settings_column_head">Загрузка товаров в раздел «Шины» (файл xlsx)</div>
+    <span id = "settings_massa_file_name"></span>
+    <span id = "settings_massa_status"></span>
+    <input type = "file" id = "massa_file" onChange = "docLoad(this, 2);" accept = ".xlsx" />
+    <input type = "hidden" id = "massa_file_0" />
+    <label for = "massa_file" id = "massa_file_label">Обзор...</label>
+    <div id = "settings_massa_add" onClick = "settingsMassaAdd();">Добавить</div>
+
+    <div class = "sm_column">
+        <div class = "sm_column_head">Колонки таблицы</div>
+        1. Сезон шины (зима, лето, всесезон.)   <br>
+        2. Ширины шины. (целое число)           <br>
+        3. Высота шины. (целое число)           <br>
+        4. Радиус шины. (без R) (целое число)   <br>
+        5. Производитель.                       <br>
+        6. Модель.                              <br>
+        7. Индекс нагрузки.                     <br>
+        8. Индекс сопротивления.                <br>
+        9. RFT (ранфлэт). (да, нет)             <br>
+        10. Шип. (да, нет)                      <br>
+        11. Груз. (да, нет)                     <br>
+        12. Цена закупочная. (целое число)      <br>
+        13. Цена продажная. (целое число)       <br>
+        14. Цена оптовая. (целое число)         <br>
+        15. Количество (целое число)            <br>
+        16. Код склада (буквы и цифры)          <br>
+        17. Название плательщика (как в системе)<br>
+        18. Коды шин (если необходимо)
+    </div>
+</div>

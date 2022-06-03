@@ -1,0 +1,14 @@
+<div class = "s_delivery_item">
+    <tname>Название</tname>
+    <input type = "text" class = "input height-23" style = 'width: 208px;' value = "%NAME%" id = "name" onKeyUp = "deleteBorderRed(this);">
+</div><br>
+<div class = "s_delivery_item">
+    <tname>Адрес</tname>
+    <input type = "text" class = "input height-23" style = 'width: 404px;' value = "%ADDRESS%" id = "address" onKeyUp = "deleteBorderRed(this);addressList(this);">
+    <list id = "address_list"></list>
+</div>
+<div class = "s_delivery_item">
+    <div onClick = 'settingsDeliveryMap();'>На карте</div>
+</div>
+<br>
+<div class = "button_green inline button_small" onClick = "settingsDeliveryChange(%ID%);buttonClick(this);">Сохранить</div>

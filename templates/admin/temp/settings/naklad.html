@@ -1,0 +1,26 @@
+<div id = "settings_naklad">
+    <div class = "settings_column_head">Реквизиты в товарной накладной (txt)</div>
+
+    <div id = "priority_naklad">
+        <span>Приоритет<br>накладной</span>
+        <div id = "tumbler_2" class = "tumbler %TUMBLER_2%" onClick = "tumblerChange(2); settingsPayerPriotiryChange();" style = "display: inline-block;">
+            <div class = "tumbler_left"></div>
+            <div class = "tumbler_right"></div>
+            <div class = "tumbler_circle"></div>
+        </div>
+    </div>
+
+
+    %FILE_NAME%
+    <input type = "file" id = "naklad_template" onChange = "docLoad(this, 3);" accept = ".txt" />
+    <label for = "naklad_template" id = "naklad_template_label">%FILE_ACTION%</label>
+
+
+
+    <div id = "sn">
+        <img src = "%SERVER%templates/img/naklad_top.jpg" id = "sn_top" />
+        <div id = "sn_text">%TEMPLATE_TEXT%</div>
+        <img src = "%SERVER%templates/img/naklad_bottom.jpg" id = "sn_bottom" />
+    </div>
+
+</div>

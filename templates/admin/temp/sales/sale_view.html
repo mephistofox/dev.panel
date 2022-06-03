@@ -1,0 +1,90 @@
+<input type = "hidden" id = "sale_status_2" value = "%SALE_STATUS%" />
+
+<input type="hidden" id="dealdate" onchange="changeDate()">
+<script>
+    $('#saveAddress').hide()
+
+    $( "#dealdate" ).datepicker({
+        showOn: "button",
+        buttonImage: "https://img.icons8.com/ios-filled/18/000000/calendar--v1.png",
+        buttonImageOnly: true,
+        buttonText: "",
+        formatDate: "yy.mm.dd",
+        getDate: '+1d'
+    });
+
+    function changeDate() {
+        var stringyDate = $("#dealdate").val();
+        stringyDate = stringyDate.split('.')
+        var newDate = new Date(stringyDate);
+        number = $('#window_3_head').text().substring(0,16).replace('Сделка P','')
+        $.ajax({
+            url: '/ajax/admin/sales.php?methodName=changeSaleDatePlan',
+            type: "POST",
+            data: {'methodName':'changeSaleDatePlan','timestamp':newDate.getTime()/1000,'number':number},
+            success: function(data) {
+                console.log(data);
+                alert("Дата планируемой сделки изменена!")
+            },
+            error: function(err) {
+                alert("Произошла ошибка при изменении даты, обратитесь к администратору!");
+            }
+        }); 
+    }
+</script>
+<div id = "sale_info">
+    <input type = "hidden" id = "price_0" value = "%PRICE_0%" />
+    <div id = "sa_payers">
+        <div id = "sa_payer_1">
+            <span>Продавец</span>
+            %PAYER_1%
+            <input type="hidden" id="payer_1" value="%_PAYER_1%">
+        </div>
+        <div id = "sa_payer_2">
+            <span>Плательщик в накладной</span>
+            %PAYER_2%
+            <input type="hidden" id="payer_2" value="%_PAYER_2%">
+        </div>
+    </div>
+    <div id = "sa_products">%PRODUCTS%</div>
+    <div id = "sa_price">%PRICE%</div>
+    <div id = "sv_movements">%MOVEMENTS%</div>
+    <div id = "sa_poluch">
+        <span>Получение</span>
+        %POLUCHENIE%
+    </div>
+    <br>
+    <button id="saveAddress" style='font-size:11px;padding:4px;' onclick='saveAddress(%ID%);$("#saveAddress").hide();alert("Адрес изменен!")'>Изменить адрес 💾</button>
+    <br>
+    <div id = "sv_client">
+        <span>Клиент</span>
+        %CLIENT%
+    </div>
+    <div id = "sv_inform">
+        <span>%INFORM%</span>
+    </div>
+    <div id = "sv_skidka_3" onClick = "salesSaleGrossMargin(this);">Продать по оптовой цене</div>
+    
+    <div id = "sv_skidka">
+        <span>Скидка</span>
+        <div class = "sv_skidka_col">
+            <item>%</item>
+            <input type = "text" onKeyUp = "salesSaleSkidka(1);" id = "skidka_percent" value = "%SKIDKA_PERCENT%" class = "number" />
+        </div>
+        <double_arrow></double_arrow>
+        <div class = "sv_skidka_col">
+            <item>₽</item>
+            <input type = "text" onKeyUp = "salesSaleSkidka(2);" id = "skidka_ruble" value = "%SKIDKA_RUBLE%" class = "number" />
+        </div>
+        <cross onClick = "salesSaleSkidkaDel();"></cross>
+    </div>
+    %OPLATA%
+    <textarea onKeyUp = "salesOplataCommentChange(this);" class = "textarea" id = "oplata_comment" style = "display: %OPLATA_COMMENT%;">%OPLATA_COMMENT_TEXT%</textarea>
+    <div id = "sa_cureer" %CUREER_DEFAULT%>
+        <span>Курьер</span>
+        %CUREER%
+    </div>
+    %CUREER_2%
+</div>
+<div id = "sale_logs">%LOGS%</div>
+<br><br><br><br><br><br>

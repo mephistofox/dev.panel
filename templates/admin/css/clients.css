@@ -1,0 +1,278 @@
+#clients {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 18px 23px 18px 23px;
+    height: calc(100vh - 212px);
+}
+    #clients_head {
+        padding-bottom: 18px;
+        border-bottom: 4px solid rgba(113, 113, 113, 0.85);
+        font-size: 0;
+    }
+        #clients_head_add {
+            width: 142px;
+            height: 36px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            background-image: url(../../img/add_client.jpg);
+            background-size: cover;
+            display: inline-block;
+        }
+        #clients_head_add:hover {
+            box-shadow: none;
+        }
+        #clients_head_phone {
+            width: 195px;
+            height: 31px;
+            background-image: url(../../img/input_phone.jpg);
+            background-size: cover;
+            padding-left: 8px;
+            padding-right: 8px;
+            display: inline-block;
+            margin-top: 5px;
+            margin-left: 196px;
+        }
+        #clients_head_list {
+            float: right;
+        }
+            .clients_head_list_item {
+                height: 14px;
+                margin-bottom: 2px;
+                text-align: right;
+            }
+            .clients_head_list_item:hover {
+                background: #FCFFA5;
+            }
+            .clients_head_list_item:hover > div {
+                visibility: visible;
+            }
+
+                .clients_head_list_item div {
+                    display: inline-block;
+                    font-size: 12px;
+                    font-style: italic;
+                    text-decoration: underline;
+                    color: #32648B;
+                    cursor: pointer;
+                    line-height: 14px;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    visibility: hidden;
+                }
+                .clients_head_list_item div:hover {
+                    text-decoration: none;
+                }
+                .clients_head_list_item span {
+                    font-size: 14px;
+                    line-height: 14px;
+                    width: 100px;
+                    display: inline-block;
+                    text-align: left;
+                }
+                .clients_head_list_item span2 {
+                    font-size: 12px;
+                    line-height: 14px;
+                    width: 100px;
+                    display: inline-block;
+                    text-align: left;
+                }
+    #clients_body {
+        margin-top: 13px;
+    }
+        #clients_body_head {
+            font-size: 0;
+        }
+            #clients_body_head input {
+                margin-right: 7px;
+            }
+            #clients_body_head > .select {
+                display: inline-block;
+            }
+        #clients_body_list {
+            margin-top: 5px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            overflow-x: hidden;
+            width: max-content;
+            height: calc(100vh - 315px);
+        }
+            .clients_body_list_item {
+                height: 20px;
+                line-height: 20px;
+                font-size: 0;
+                cursor: pointer;
+                margin-bottom: 2px;
+            }
+            .clients_body_list_item:hover {
+                background: #FFFDDB;
+            }
+                .clients_body_list_item div {
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    margin-right: 7px;
+                    cursor: pointer;
+                }
+
+#cc_redact {
+    font-style: italic;
+    font-size: 12px;
+    color: #949494;
+    margin-top: -21px;
+    position: absolute;
+    margin-left: 331px;
+    cursor: pointer;
+}
+#cc_redact:hover {
+    color: #32648B;
+}
+.cc_str {
+    margin-bottom: 10px;
+}
+    .cc_str > title {
+        display: inline-block;
+        font-style: italic;
+        font-size: 14px;
+        width: 140px;
+    }
+    .cc_str > title2 {
+        display: inline-block;
+        font-style: italic;
+        font-size: 14px;
+        width: 140px;
+        line-height: 30px;
+    }
+    .cc_str_right {
+        display: inline-block;
+        margin-left: 30px;
+    }
+        .cc_str_right > span {
+            font-style: italic;
+            font-size: 12px;
+            text-decoration: underline;
+            color: #32648B;
+            cursor: pointer;
+        }
+        .cc_str_right > span:hover {
+            text-decoration: none;
+        }
+        .cc_str_right > fullname {
+            font-size: 12px;
+            color: #949494;
+        }
+        .cc_str_right > pass {
+            font-size: 12px;
+            font-style: italic;
+            color: #949494;
+            cursor: pointer;
+        }
+        .cc_str_right > pass:hover {
+            color: #32648B;
+        }
+        .cc_str_right > .input {
+            width: 36px;
+            margin-left: 63px;
+            position: absolute;
+            margin-top: -22px;
+        }
+        .cc_str_right > per {
+            display: inline-block;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: -17px;
+            position: absolute;
+            margin-left: 91px;
+        }
+        .cc_str_right > .tumbler_base {
+            margin-top: 0;
+        }
+
+#cc_contacts {
+    background: #E4E4E4;
+    padding-bottom: 13px;
+    margin-bottom: 18px;
+    margin-top: 10px;
+}
+    #cc_contacts > headline {
+        background: #989898;
+        width: 440px;
+        height: 19px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        padding-left: 11px;
+        font-style: italic;
+        display: block;
+    }
+    #cc_contacts_list {
+        margin-top: 6px;
+    }
+        .cc_contacts_list_str {
+            height: 25px;
+            margin-bottom: 2px;
+        }
+        .cc_contacts_list_str:hover {
+            background: #D8D8D8;
+        }
+        .cc_contacts_list_str:hover > a, .cc_contacts_list_str:hover > cross {
+            display: inline-block;
+        }
+        .cc_contacts_list_str * {
+            line-height: 25px;
+        }
+            .cc_contacts_list_str > phone {
+                display: inline-block;
+                margin-left: 11px;
+                width: 120px;
+                font-size: 14px;
+            }
+            .cc_contacts_list_str > fio {
+                display: inline-block;
+                margin-left: 20px;
+                width: 130px;
+                font-size: 14px;
+            }
+            .cc_contacts_list_str > a {
+                display: none;
+                font-size: 12px;
+                text-decoration: underline;
+                color: #32648B;
+                cursor: pointer;
+                font-style: italic;
+            }
+            .cc_contacts_list_str > cross {
+                margin-top: 7px;
+                margin-right: 10px;
+            }
+            .cc_contacts_list_str > a:hover {
+                text-decoration: none;
+            }
+            .cc_contacts_list_str > span {
+                margin-left: 35px;
+                font-size: 14px;
+                text-decoration: underline;
+                color: #32648B;
+                cursor: pointer;
+                display: inline-block;
+                font-style: italic;
+            }
+            .cc_contacts_list_str > span:hover {
+                text-decoration: none;
+            }
+    #cc_contacts > contactadd {
+        margin-left: 11px;
+        font-size: 14px;
+        text-decoration: underline;
+        color: #32648B;
+        cursor: pointer;
+        display: inline-block;
+        font-style: italic;
+    }
+    #cc_contacts > contactadd:hover {
+        text-decoration: none;
+    }
+
+

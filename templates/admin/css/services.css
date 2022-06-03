@@ -1,0 +1,303 @@
+#services {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 18px 23px 18px 23px;
+    height: calc(100vh - 212px);
+}
+    #services_head {
+        padding-bottom: 18px;
+        font-size: 0;
+    }
+        #services_head_settings {
+            width: 116px;
+            height: 36px;
+            cursor: pointer;
+            background-image: url(../../img/settings.jpg);
+            background-size: cover;
+            float: right;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+        #services_head_settings:hover {
+            box-shadow: none;
+        }
+        #services_head_accounting {
+            font-size: 16px;
+            text-decoration: underline;
+            color: #32648B;
+            cursor: pointer;
+            float: right;
+            line-height: 36px;
+            margin-right: 34px;
+        }
+        #services_head_accounting:hover {
+            text-decoration: none;
+        }
+        #services_head_add {
+            width: 132px;
+            height: 36px;
+            cursor: pointer;
+            background-image: url(../../img/add_service.jpg);
+            background-size: cover;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #services_head_add:hover {
+            box-shadow: none;
+        }
+        #services_head_season {
+            width: 183px;
+            height: 36px;
+            cursor: pointer;
+            background-image: url(../../img/season.jpg);
+            background-size: cover;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            display: inline-block;
+            margin-left: 12px;
+        }
+        #services_head_season:hover {
+            box-shadow: none;
+        }
+    #services_body {
+        margin-left: -5px;
+    }
+        #services_body_head {
+            font-size: 0;
+        }
+            #services_body_head > .input, #services_body_head > .but {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        #services_body_list {
+            margin-top: 5px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            overflow-x: hidden;
+            width: max-content;
+            height: calc(100vh - 293px);
+        }
+            .services_body_list_item {
+                height: 20px;
+                font-size: 0;
+                cursor: pointer;
+                margin-bottom: 4px;
+                display: inline-block;
+            }
+            .services_body_list_item:hover {
+                background: #FFFDDB;
+            }
+                .services_body_list_item > .service_item {
+                    display: inline-block;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgba(0, 0, 0, 0.85);
+                    cursor: pointer;
+                }
+
+#cc_head {
+    border-bottom: 7px solid #A7A7A7;
+    padding-bottom: 17px;
+    margin-bottom: 11px;
+}
+    #cc_head > barcode {
+        margin-top: 5px;
+    }
+
+.cc_str {
+    margin-bottom: 16px;
+}
+    .cc_str > title2 {
+        width: 155px;
+        display: inline-block;
+        font-style: italic;
+        line-height: 30px;
+    }
+    .cc_str > span {
+        line-height: 30px;
+    }
+    .cc_str > .textarea {
+        width: 204px;
+        height: 51px;
+    }
+    .cc_str > defcount {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .cc_str > title3 {
+        width: 155px;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 24px;
+    }
+        .cc_str > title3 > checkbox {
+            margin-top: -7px;
+
+        }
+            .cc_str > title3 > checkbox > label {
+                font-weight: normal;
+                line-height: 22px;
+            }
+
+    .cc_str > #cc_str_1 {
+        display: inline-block;
+    }
+    .cc_str > #cc_str_2 {
+        display: none;
+        font-size: 0;
+    }
+        #cc_str_2_img1 {
+            width: 42px;
+            height: 20px;
+            display: inline-block;
+            background-image: url(../../img/car_1.png);
+            background-size: cover;
+            margin-top: 5px;
+        }
+        #cc_str_2_img2 {
+            width: 42px;
+            height: 20px;
+            display: inline-block;
+            background-image: url(../../img/car_2.png);
+            background-size: cover;
+            margin-top: 5px;
+        }
+        #cc_str_2_img3 {
+            width: 42px;
+            height: 20px;
+            display: inline-block;
+            background-image: url(../../img/car_3.png);
+            background-size: cover;
+            margin-top: 5px;
+        }
+        .cc_str > #cc_str_2 > input {
+            margin-bottom: 14px;
+            margin-left: 6px;
+        }
+
+#sc_redact {
+    font-style: italic;
+    font-size: 12px;
+    color: #949494;
+    margin-top: -21px;
+    position: absolute;
+    margin-left: 331px;
+    cursor: pointer;
+}
+#sc_redact:hover{
+    color: #32648B;
+}
+#product_delete {
+    font-style: italic;
+    font-size: 12px;
+    color: #949494;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -2px;
+    margin-left: 368px;
+}
+#product_delete:hover {
+    color: #ff1a1a;
+}
+
+#sc_name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -19px;
+    position: absolute;
+}
+.sc_str {
+
+}
+    .sc_str > title2 {
+        width: 105px;
+        display: inline-block;
+        line-height: 30px;
+    }
+    .sc_str > span {
+        line-height: 30px;
+    }
+    .sc_str > defcount {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .sc_str > title3 {
+        width: 105px;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 30px;
+    }
+    .sc_str > .sc_str_right {
+        display: inline-block;
+    }
+        .sc_str_right > span {
+            line-height: 30px;
+        }
+        .sc_str_right > radioimg {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        .sc_str_right > radioimg:last-child {
+            margin-right: 0;
+        }
+        .sc_str_right > radioimg > label {
+            margin-left: 20px;
+        }
+    .sc_str:last-child {
+        margin-top: 20px;
+    }
+
+.sa_str {
+    margin-bottom: 12px;
+}
+    .sa_str > title2 {
+        width: 125px;
+        display: inline-block;
+        line-height: 30px;
+        font-style: italic;
+    }
+    .sa_str > span {
+        line-height: 30px;
+    }
+    .sa_str > defcount {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .sa_str > title3 {
+        width: 125px;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 30px;
+    }
+    .sa_str > #calendar {
+        display: inline-block;
+    }
+    .sa_str > #calendar > input {
+        width: 110px;
+        height: 25px;
+        font-size: 17px;
+        line-height: 22px;
+        padding-top: 3px;
+    }
+    .sa_str > #diametr_add {
+        width: 100px;
+        display: inline-block;
+        margin-left: 5px;
+    }
+    .sa_str > #sa_str_right {
+        display: inline-block;
+        vertical-align: top;
+    }
+    #sa_str_right > .tumbler_base {
+        margin-top: 4px;
+    }
+    #sa_str_right > doublebutton {
+        float: right;
+        margin-top: 4px;  
+    }
+
+
+

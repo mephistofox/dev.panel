@@ -1,0 +1,1 @@
+SELECT * FROM code WHERE tire = '1' AND payer = '2' AND sale = 0

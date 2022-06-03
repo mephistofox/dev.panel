@@ -1,0 +1,70 @@
+<div class = "pa_str">
+    <title2>Артикул</title2>
+    <span>%TIRE_ARTICLE%</span>
+</div>
+<div class = "pa_str">
+    <title2>Фотографии</title2>
+    <photoAdd onClick = "windowPositionPhoto(1);">Добавить фото</photoAdd>
+</div>
+<div class = "pa_str">
+    <title2>Производитель</title2>
+    <input type = "text" value = "%BRAND%" class = "input height-28" id = "tire_brand" onKeyUp = "deleteBorderRed(this);" style = "width: 204px;" />
+</div>
+<div class = "pa_str">
+    <title2>Модель</title2>
+    <input type = "text" value = "%MODEL%" class = "input height-28" id = "tire_model" onKeyUp = "deleteBorderRed(this);" style = "width: 204px;" />
+</div>
+<div class = "pa_str">
+    <title2>Сезон</title2>
+    %BUTTONS_SEASON%
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Ширина</title2>
+    %TIRE_W%
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Высота</title2>
+    %TIRE_H%
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Радиус</title2>
+    %TIRE_R%
+</div>
+<div class = "pa_str">
+    <title2>ИН</title2>
+    <input type = "text" value = "%NAGR%" class = "input height-28" id = "tire_nagr" onKeyUp = "deleteBorderRed(this);" style = "width: 52px;" />
+</div>
+<div class = "pa_str">
+    <title2>ИС</title2>
+    <input type = "text" value = "%RESIST%" class = "input height-28" id = "tire_resist" onKeyUp = "deleteBorderRed(this);" style = "width: 52px;" />
+</div>
+<div class = "pa_str">
+    <title2>RFT</title2>
+    %RFT%
+</div>
+<div class = "pa_str">
+    <title2>Шип</title2>
+    %SPIKE%
+</div>
+<div class = "pa_str">
+    <title2>Груз</title2>
+    %CARGO%
+</div>
+%PAYER%
+<div class = "pa_str">
+    <title2><b>Стоимость</b></title2>
+    <div class = "right">
+        <div class = "right_item">
+            <name>Закупочная</name>
+            <input value = "%PRICE_1%" type = "text" class = "input height-28" id = "price_purchase" onKeyUp = "deleteBorderRed(this);" onchange="calculateGRPrices(this)"/>
+        </div>
+        <div class = "right_item">
+            <name>Оптовая</name>
+            <input value = "%PRICE_3%" min = "_GM_" type = "text" class = "input height-28" id = "price_wholesale" onKeyUp = "deleteBorderRed(this);" onchange="productCRUDCheck(this)"/>
+        </div>
+        <div class = "right_item">
+            <name>Продажная</name>
+            <input value = "%PRICE_2%" min = "_RM_" type = "text" class = "input height-28" id = "price_sale" onKeyUp = "deleteBorderRed(this);" onchange="productCRUDCheck(this)"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class = "s_priceSet_item">
+    <tname>Наценка для оптовиков (%)</tname>
+    <input type = "number" class = "input height-28" min="1" max="100" value="%grossMargin%" placeholder="Целое число, проценты" id = "gross_price_margin" onKeyUp = "deleteBorderRed(this);" />
+</div>
+<div class = "s_priceSet_item" style="margin-top: 10px;">
+    <tname>Наценка для розницы (%)</tname>
+    <input type = "number" class = "input height-28" min="1" max="100" value="%retailMargin%" placeholder="Целое число, проценты" id = "retail_price_margin" onKeyUp = "deleteBorderRed(this);" />
+</div>
+<br>
+<div class = "button_green inline" onClick = "settingsChangePriceSet();buttonClick(this);">Сохранить</div>

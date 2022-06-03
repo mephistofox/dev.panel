@@ -1,0 +1,43 @@
+<div id = "cc_redact" onClick = 'windowClientRedact(%ID%);'>Редактировать</div>
+<br>
+<div id = "product_delete" onClick = "questionUserDelete(1);">Удалить</div>
+<div id = "product_delete_2">Точно удалить? <span onClick = "userDelete(%ID%);">Да</span> <span onClick = "questionDelete(0);">Нет</span></div>
+
+<div class = "cc_str">
+    <title>Название</title>
+    <div class = "cc_str_right"><b>%NAME%</b></div>
+</div>
+<div class = "cc_str">
+    <title>ИНН</title>
+    <div class = "cc_str_right">
+        %INN%
+        <span>Сделки</span><br>
+        <fullname>%FULL_NAME%</fullname>
+    </div>
+</div>
+<div class = "cc_str">
+    <title>Эл. почта</title>
+    <div class = "cc_str_right">
+        %MAIL%
+        <pass id = "cc_str_right_pass" onClick = 'clientsPassChange(%ID%);'>Отправить пароль</pass>
+    </div>
+</div>
+<div class = "cc_str">
+    <title>Адрес доставки</title>
+    <div class = "cc_str_right">%ADDRESS%</div>
+</div>
+<div id = "cc_contacts">
+    <headline>Контактные лица</headline>
+    <div id = "cc_contacts_list">%CONTACTS%</div>
+    <contactadd id = "cc_contacts_button" onClick = "clientsContactAdd(%ID%);">Добавить</contactadd>
+</div>
+<div class = "cc_str">
+    <title>Статус</title>
+    <div class = "cc_str_right">%STATUS%</div>
+</div>
+<div class = "cc_str">
+    <title>Скидка постоянного клиента</title>
+    <div class = "cc_str_right">%TUMBLER%</div>
+</div>
+
+

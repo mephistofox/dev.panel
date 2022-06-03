@@ -1,0 +1,37 @@
+<div id = "cc_head">
+    <input type = "text" class = "input height-28" style = "width: 204px;" value = "%BARCODE%" placeholder = "Штрих-код" id = "barcode_add" onKeyUp = "deleteBorderRed(this);" />
+    <barcode></barcode>
+</div>
+<div class = "cc_str">
+    <title2>Артикул</title2>
+    <span>%ARTICLE%</span>
+</div>
+<div class = "cc_str">
+    <title2>Название</title2>
+    <input type = "text" class = "input height-28" value = "%NAME%" style = "width: 204px;" id = "name_add" onKeyUp = "deleteBorderRed(this);" />
+</div>
+<div class = "cc_str">
+    <title2>Описание</title2>
+    <textarea class = "textarea" id = "description_add" onKeyUp = "deleteBorderRed(this);">%DESCRIPTION%</textarea>
+</div>
+<div class = "cc_str">
+    <title2>Примечания</title2>
+    <input type = "text" class = "input height-28" value = "%NOTE%" style = "width: 204px;" id = "note_add" onKeyUp = "deleteBorderRed(this);" />
+</div>
+<div class = "cc_str">
+    <title3>Стоимость<br>%CHECK%</title3>
+    <div id = "cc_str_1" style = "%D_1%"><input type = "text" value = "%PRICE_1%" class = "input height-28 decimal" style = "width: 101px;" id = "price_add" onKeyUp = "deleteBorderRed(this);" /></div>
+    <div id = "cc_str_2" style = "%D_2%">
+        <div id = "cc_str_2_img1"></div>
+        <input type = "text" value = "%PRICE_1%" class = "input height-28 decimal" style = "width: 53px;" id = "price_1_add" onKeyUp = "deleteBorderRed(this);" /><br>
+        <div id = "cc_str_2_img2"></div>
+        <input type = "text" value = "%PRICE_2%" class = "input height-28 decimal" style = "width: 53px;" id = "price_2_add" onKeyUp = "deleteBorderRed(this);" /><br>
+        <div id = "cc_str_2_img3"></div>
+        <input type = "text" value = "%PRICE_3%" class = "input height-28 decimal" style = "width: 53px;" id = "price_3_add" onKeyUp = "deleteBorderRed(this);" />
+    </div>
+
+</div>
+<div class = "cc_str">
+    <title2>Кол-во по умолчанию</title2>
+    %COUNT_DEFAULT%
+</div>

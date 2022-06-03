@@ -1,0 +1,58 @@
+<div class = "moving_redact" onClick = "windowMovementRedactView(%ID%);">Редактировать</div><br>
+<div class = "moving_delete" onClick = "movementsDelete(%ID%);">Удалить</div>
+<div class = "receipt_str">
+    <title>Движение</title>
+    <val>%MOVING_TYPE%</val>
+</div>
+<div class = "receipt_str">
+    <title>ID и статус</title>
+    <val>%ID_STATUS%</val>
+</div>
+<div class = "receipt_str">
+    <title>Дата</title>
+    <val>%DATE%</val>
+</div>
+<div class = "receipt_str">
+    <title>Дата План</title>
+    <val>%DATE_PLAN%</val>
+</div>
+<div class = "receipt_str receipt_str_1" style = "height: 25px">
+    <title>Поставщик</title>
+    <val>%PROVIDERS%</val>
+</div>
+<div class = "receipt_str">
+    <title>Объект</title>
+    %PRODUCT%
+</div>
+<div class = "receipt_str">
+    <title style = "line-height: 30px;">Количество</title>
+    <val>%COUNT%</val>
+</div>
+<div class = "receipt_str receipt_str_1">
+    <title style = "line-height: 15px;">Закупочная стоимость, шт.</title>
+    <val>%PRICE_0%<span>₽</span></val>
+</div>
+<div class = "receipt_str receipt_str_1">
+    <title>Склад</title>
+    <val>%BASE_STORAGE%</val>
+</div>
+<div class = "receipt_str receipt_str_2 receipt_str_3 receipt_str_4">
+    <title>Откуда</title>
+    <storage_right>%STORAGE%</storage_right>
+</div>
+<div class = "receipt_str receipt_str_3 receipt_str_4">
+    <title>Куда</title>
+    <storage_right>%KUDA%</storage_right>
+</div>
+<div class = "receipt_str receipt_str_2">
+    <title>Основание</title>
+    <storage_right>%OSNOVANIE%</storage_right>
+</div>
+<div class = "receipt_str receipt_str_3 receipt_str_4" style = "height: 25px">
+    <title>Курьер</title>
+    <val>%CUREER%</val>
+</div>
+%PAYER%
+%CODES%
+<input type = "hidden" id = "movement_type" value = "%ACTION_TYPE%" />
+

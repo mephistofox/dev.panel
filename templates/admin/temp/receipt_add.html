@@ -1,0 +1,66 @@
+<div class = "receipt_str receipt_str_1">
+    <title>Движение</title>
+    <val>Приёмка</val>
+</div>
+<div class = "receipt_str receipt_str_2">
+    <title>Движение</title>
+    <val>Пополнение</val>
+</div>
+<div class = "receipt_str">
+    <title>ID и статус</title>
+    <val>%ID_STATUS%</val>
+</div>
+<div class = "receipt_str" style = "height: 25px">
+    <title>Поставщик</title>
+    %PROVIDERS%
+</div>
+<div class = "receipt_str receipt_str_2" style = "height: 25px">
+    <title>Курьер</title>
+    %CUREER%
+</div>
+<div class = "receipt_str">
+    <title>Объект</title>
+    %PRODUCT%
+</div>
+<div class = "receipt_str receipt_str_2">
+    <title>Информация</title>
+    <textarea class = "textarea" id = "information"></textarea>
+</div>
+<div class = "receipt_str receipt_str_2">
+    <title>Дата</title>
+    <div id = "calendar"></div>
+</div>
+<div class = "receipt_str">
+    <title style = "line-height: 30px;">Количество</title>
+    %COUNT%
+</div>
+<div class = "receipt_str">
+    <title style = "line-height: 15px;">Закупочная стоимость, шт.</title>
+    <input type = "text" class = "input height-28 number" id = "price_purchase" onKeyUp = "deleteBorderRed(this);" style = "width: 53px;" onchange="calculateGRPrices(this)"/> <span>₽</span>
+</div>
+<div class = "receipt_str">
+    <title style = "line-height: 15px;">Оптовая цена, шт.</title>
+    <input type = "text" class = "input height-28 number" id = "price_wholesale" onKeyUp = "deleteBorderRed(this);" style = "width: 53px;" onchange="productCRUDCheck(this)"/> <span>₽</span>
+</div>
+<div class = "receipt_str">
+    <title style = "line-height: 15px;">Розничная цена, шт.</title>
+    <input type = "text" class = "input height-28 number" id = "price_sale" onKeyUp = "deleteBorderRed(this);" style = "width: 53px;" onchange="productCRUDCheck(this)"/> <span>₽</span>
+</div>
+<div class = "receipt_str receipt_str_2">
+    <title>&nbsp;&nbsp;&nbsp;</title>
+    <val>
+        <div class = "storage_client_type storage_client_type_active" onClick = "storageClientChange(1, this);">На склад</div>
+        <div class = "storage_client_type" onClick = "storageClientChange(2, this);">Под клиента</div>
+    </val>
+</div>
+<div class = "receipt_str">
+    <title>Склад</title>
+    %BASE_STORAGE%
+</div>
+
+<div class = "receipt_str receipt_str_3">
+    <title>Клиент</title>
+    %CLIENT%
+</div>
+%PAYER%
+<input type = "hidden" id = "storage_hidden_id" value = "-1" />

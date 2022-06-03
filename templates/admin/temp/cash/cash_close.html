@@ -1,0 +1,31 @@
+<input type = "hidden" id = "duration_s" value = "%START%" />
+<div class = "cc_item">
+    <title>Кассир:</title>
+    <value style = "width: 200px;">%CASHIER%</value>
+</div>
+<div class = "cc_item">
+    <title>Открыта:</title>
+    <value>%OPEN%</value>
+</div>
+<div class = "cc_item">
+    <title>Длится:</title>
+    <value id = "time_duration">%DURATION%</value>
+</div>
+<div id = "cc_title">Поступления</div>
+<div class = "cc_item">
+    <title style = "font-style: normal;">Наличные</title>
+    <value style = "text-align: right;">%NAL%</value>
+</div>
+<div class = "cc_item">
+    <title style = "font-style: normal;">Безнал</title>
+    <value style = "text-align: right;">%BEZNAL%</value>
+</div>
+<div id = "cd_raz">
+    <title>Размен</title>
+    <input type = "text" id = "cd_razmen" class = "number" autocomplete = "off" value = "0" onKeyUp = "deleteBorderRed(this);" /> ₽
+</div>
+<div id = "cd_pas">
+    <title>Пароль</title>
+    <input type = "password" id = "cd_password" autocomplete = "off" onKeyUp = "deleteBorderRed(this);" />
+</div><br>
+%SKACH%

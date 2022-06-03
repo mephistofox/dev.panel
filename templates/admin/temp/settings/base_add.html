@@ -1,0 +1,38 @@
+<div class = "sba_str">
+    <div class = "sba_str_left"><span>Название</span></div>
+    <div class = "sba_str_right"><input type = "text" onKeyUp = "deleteBorderRed(this);" id = "name" class = "input height-28" style = "width: 204px;" /></div>
+</div>
+<div class = "sba_str">
+    <div class = "sba_str_left"><span>Цвет</span><a href = "https://csscolor.ru/hex/" target = "_blank">Выбрать</a></div>
+    <div class = "sba_str_right">
+        <input type = "text" onKeyUp = "deleteBorderRed(this);" id = "color" onChange = "settingsBaseColorChange();" class = "input height-28" value = "000000" style = "width: 54px; padding-left: 19px;" />
+        <span>#</span>
+        <circle id = "color_circle"></circle>
+    </div>
+</div>
+<div class = "sba_str">
+    <div class = "sba_str_left"><span>Код (3 буквы)</span></div>
+    <div class = "sba_str_right"><input type = "text" onKeyUp = "deleteBorderRed(this);" id = "code" class = "input height-28" style = "width: 38px;" /></div>
+</div>
+<div class = "sba_str">
+    <div class = "sba_str_left"><span>Адрес</span></div>
+    <div class = "sba_str_right"><input type = "text" onKeyUp = "deleteBorderRed(this);" id = "address" class = "input height-28" style = "width: 279px;" /></div>
+</div>
+<div class = "sba_str">
+    <div class = "sba_str_left"><span>Пункт выдачи</span></div>
+    <div class = "sba_str_right">
+        <div id = 'tumbler_1' class = 'tumbler tumbler_active' onclick = 'tumblerChange(1);'>
+            <div class = 'tumbler_left'></div>
+            <div class = 'tumbler_right'></div>
+            <div class = 'tumbler_circle'></div>
+        </div>
+    </div>
+</div>
+<div class = "sba_str">
+    <div class = "sba_str_left"><span>Время работы</span></div>
+    <div class = "sba_str_right">
+        <input type = "text" onKeyUp = "deleteBorderRed(this);" id = "time_1" class = "input height-28" onChange = "settingsBaseTimeProof(this);" style = "width: 49px;" />
+        <span2>—</span2>
+        <input type = "text" onKeyUp = "deleteBorderRed(this);" id = "time_2" class = "input height-28" onChange = "settingsBaseTimeProof(this);" style = "width: 49px;" />
+    </div>
+</div>

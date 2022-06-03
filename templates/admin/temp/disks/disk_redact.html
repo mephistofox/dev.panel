@@ -1,0 +1,57 @@
+<div class = "pa_str">
+    <title2>Артикул</title2>
+    <span>%DISK_ARTICLE%</span>
+</div>
+<div class = "pa_str">
+    <title2>Фотографии</title2>
+    <photoAdd onClick = "windowPositionPhoto(2);">Добавить фото</photoAdd>
+</div>
+<div class = "pa_str">
+    <title2>Номенклатура</title2>
+    <input value = "%NOME%" type = "text" class = "input height-28" id = "disk_nomenclature" onKeyUp = "deleteBorderRed(this);" style = "width: 204px;" />
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Ширина</title2>
+    %DISK_W%
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Радиус</title2>
+    %DISK_R%
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Отверстий</title2>
+    %HOLE%
+</div>
+<div class = "pa_str">
+    <title2>Межболт</title2>
+    <input value = "%BOLT%" type = "text" class = "input height-28" id = "disk_bolt" onKeyUp = "deleteBorderRed(this);" style = "width: 52px;" />
+</div>
+<div class = "pa_str">
+    <title2>Вылет</title2>
+    <input value = "%VYLET%" type = "text" class = "input height-28" id = "disk_vylet" onKeyUp = "deleteBorderRed(this);" style = "width: 52px;" />
+</div>
+<div class = "pa_str">
+    <title2>Ступица</title2>
+    <input value = "%HUB%" type = "text" class = "input height-28" id = "disk_hub" onKeyUp = "deleteBorderRed(this);" style = "width: 52px;" />
+</div>
+<div class = "pa_str pa_str_fix_height">
+    <title2>Цвет</title2>
+    %COLOR%
+</div>
+<div class = "pa_str">
+    <title2><b>Стоимость</b></title2>
+    <div class = "right">
+        <div class = "right_item">
+            <name>Закупочная</name>
+            <input value = "%PRICE_1%" type = "text" class = "input height-28" id = "price_purchase" onKeyUp = "deleteBorderRed(this);" onchange="calculateGRPrices(this)"/>
+        </div>
+        <div class = "right_item">
+            <name>Оптовая</name>
+            <input value = "%PRICE_3%" type = "text" class = "input height-28" id = "price_wholesale" onKeyUp = "deleteBorderRed(this);" onchange="productCRUDCheck(this)"/>
+        </div>
+        <div class = "right_item">
+            <name>Продажная</name>
+            <input value = "%PRICE_2%" type = "text" class = "input height-28" id = "price_sale" onKeyUp = "deleteBorderRed(this);" onchange="productCRUDCheck(this)"/>
+        </div>
+    </div>
+</div>

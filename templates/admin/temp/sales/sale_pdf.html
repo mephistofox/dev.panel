@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: DejaVu Sans;
+                color: #000;
+                font-weight: bold;
+                font-size: 12px;
+                padding: 40px;
+            }
+                #barcode {
+                    float: right;
+
+                }
+                #head {
+
+                }
+                    #head_number {
+                        font-size: 18px;
+                        display: block;
+                    }
+                    #head_date {
+                        font-size: 12px;
+                        font-style: italic;
+                        display: block;
+                    }
+                #desc {
+                    margin-top: 20px;
+                    font-size: 11px;
+                }
+                #table {
+                    font-size: 0;
+                    margin-top: 20px;
+                }
+                    .tr {
+                        font-size: 0;
+                        margin-top: -1px;
+                    }
+                        .td {
+                            display: inline-block;
+                            border: 1px solid black;
+                            padding: 4px;
+                            font-size: 11px;
+                            height: 20px;
+                        }
+                        .tr_right {
+                            text-align: right;
+                        }
+                        .t_number {
+                            width: 30px;
+                        }
+                        .t_name {
+                            margin-left: -1px;
+                            width: 325px;
+                            font-size: 9px;
+                        }
+                        .t_count {
+                            margin-left: -1px;
+                            width: 60px;
+                        }
+                        .t_price {
+                            margin-left: -1px;
+                            width: 60px;
+                        }
+                        .t_all {
+                            margin-left: -1px;
+                            width: 100px;
+                        }
+                #price_all {
+                    float: right;
+                    font-size: 14px;
+                    margin-top: 5px;
+                    font-weight: bold;
+                }
+                .bottom {
+                    font-size: 0;
+                }
+                    .bottom_left {
+                        display: inline-block;
+                        vertical-align: top;
+                        font-style: italic;
+                        font-size: 8px;
+                        font-weight: normal;
+                        margin-left: 130px;
+                        border-top: 1px solid black;
+                        width: 200px;
+                        text-align: center;
+                    }
+        </style>
+    </head>
+    <body>
+        <div id = "barcode">%BARCODE%</div>
+        <div id = "head">
+            <div id = "head_number">Товарная накладная #P%NUMBER%</div>
+            <div id = "head_date">от %DAY% %MONTH% %YEAR%</div>
+        </div>
+        <div id = "desc">%NAKLAD%</div>
+        <div id = "table">
+            <div class = "tr">
+                <div class = "td t_number">№</div>
+                <div class = "td t_name" style = "font-size: 11px;">Наименование</div>
+                <div class = "td t_count">Кол-во</div>
+                <div class = "td t_price">Цена</div>
+                <div class = "td t_all">Сумма</div>
+            </div>
+            %TABLE%
+        </div>
+        <div id = "price_all">%SUMMA_ALL% ₽</div>
+        <br><br><br><br><br><br>
+        Отпустил кассир<br>
+        <div class = "bottom">
+            <div class = "bottom_left">%FIO%</div>
+        </div>
+    </body>
+</html>

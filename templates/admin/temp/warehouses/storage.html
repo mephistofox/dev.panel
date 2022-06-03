@@ -1,0 +1,32 @@
+<div id = "storage_top">
+    <div id = "storage_top_1">
+        <span>%NAME%</span>
+        <span2>%CODE%</span2>
+        <span3 class = "change_visible" onClick = "windowStorageRedact(%ID%);">Изменить</span3>
+    </div>
+    <div id = "storage_top_2">
+        <span>Мест:</span>
+        <span>Занято:</span>
+        <span>%TIRES_NAME%:</span>
+    </div>
+    <div id = "storage_top_3">
+        <span>%COUNT%</span>
+        <span>%OCCUPIED%</span>
+        <span>%TIRES%</span>
+    </div>
+    <div class = "button button_green button_auto inline" onClick = "buttonClick(this);windowReceiptAdd(1);">Принять</div>
+    <div class = "button button_yellow button_auto inline" onClick = "buttonClick(this);windowDownAdd();" style = "margin-left: 27px;">Списать</div>
+    <div id = "storage_top_4">
+        <span class = "change_visible" onClick = "windowStorageRedact(%ID%);">Редактировать</span>
+        <span2 class = "change_visible" onClick = "settingsBaseStorageDel(%ID%);">Удалить хранилище</span2>
+    </div>
+</div>
+<div id = "storage_middle">
+    <div id = "storage_middle_head">
+        <div class = "but_empty" style = "width: 79px;">Склад</div>
+        <input type = "text" class = "input height-23" onKeyUp = "%SCRIPT%();" placeholder = "%TIRE_NAME_2%" id = "name" style = "width: 397px;">
+        <div class = "but" style = "width: 73px;" id = "count" onClick = "%SCRIPT%(1);">Кол-во<triangle></triangle></div>
+        <div class = "but_empty" style = "width: 274px;">Действие</div>
+    </div>
+    <div id = "storage_middle_list"></div>
+</div>

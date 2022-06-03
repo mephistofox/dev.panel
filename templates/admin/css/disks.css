@@ -1,0 +1,298 @@
+#disks {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 18px 23px 18px 23px;
+    height: calc(100vh - 212px);
+}
+    #disks_head {
+        padding-bottom: 18px;
+        font-size: 0;
+    }
+        #disks_head_settings {
+            width: 116px;
+            height: 36px;
+            cursor: pointer;
+            background-image: url(../../img/settings.jpg);
+            background-size: cover;
+            float: right;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+        #disks_head_settings:hover {
+            box-shadow: none;
+        }
+        #disks_head_add {
+            width: 104px;
+            height: 36px;
+            cursor: pointer;
+            background-image: url(../../img/add.jpg);
+            background-size: cover;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #disks_head_add:hover {
+            box-shadow: none;
+        }
+        #disks_head_down {
+            width: 104px;
+            height: 36px;
+            cursor: pointer;
+            background-image: url(../../img/down.jpg);
+            background-size: cover;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            display: inline-block;
+            margin-left: 19px;
+        }
+        #disks_head_down:hover {
+            box-shadow: none;
+        }
+    #disks_body {
+        margin-top: 8px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height: calc(100vh - 300px);
+        padding: 5px;
+        margin-left: -5px;
+    }
+        #disks_body_head {
+            font-size: 0;
+            height: 25px;
+        }
+            #disks_body_head input {
+                margin-right: 7px;
+            }
+            #disks_body_head > .select {
+                display: inline-block;
+                margin-right: 7px;
+            }
+            #disks_body_head > .select_table {
+                display: inline-block;
+                margin-right: 7px;
+            }
+            #disks_body_head > .but {
+                margin-right: 7px;
+            }
+            #disks_body_head > .but_empty {
+                margin-right: 7px;
+            }
+
+        #disks_body_list {
+            margin-top: 5px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            overflow-x: hidden;
+            width: max-content;
+            height: calc(100vh - 358px);
+        }
+            .disks_body_list_item {
+                height: 20px;
+                line-height: 20px;
+                font-size: 0;
+                cursor: pointer;
+                margin-bottom: 4px;
+                display: inline-block;
+            }
+            .disks_body_list_item:hover {
+                background: #FFFDDB;
+            }
+                .disks_body_list_item > .disk_item {
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-right: 7px;
+                    cursor: pointer;
+                }
+
+#sc_redact {
+    font-style: italic;
+    font-size: 12px;
+    color: #949494;
+    margin-top: -21px;
+    position: absolute;
+    margin-left: 331px;
+    cursor: pointer;
+}
+#sc_redact:hover {
+    color: #32648B;
+}
+#sc_changelog {
+    font-style: italic;
+    font-size: 12px;
+    color: #949494;
+    margin-top: 21px;
+    position: absolute;
+    margin-left: 361px;
+    cursor: pointer;
+}
+#sc_changelog:hover {
+    color: #32648B;
+}
+#sc_changelog.active{
+    display: inline;
+    background-color: #FE8020;
+    box-shadow: -10px 0 0 #FE8020, 10px 0 0 #FE8020;
+    padding: 10px 0;
+    color: #FFFFFF;
+}
+#sc_name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -19px;
+    position: absolute;
+}
+.sc_str {
+
+}
+    .sc_str > title2 {
+        width: 105px;
+        display: inline-block;
+        line-height: 18px;
+    }
+    .sc_str > span {
+        line-height: 18px;
+    }
+.sc_head {
+    font-weight: bold;
+    margin-top: 20px;
+    height: 21px;
+    line-height: 21px;
+}
+.sc_str_2 {
+    height: 20px;
+    margin-left: -5px;
+    font-size: 0;
+    margin-bottom: 2px;
+    width: 233px;
+}
+.sc_str_2:hover {
+    background: #FFFFDD;
+}
+.sc_str_2:hover > redact {
+    visibility: visible;
+}
+    .sc_str_2 > title2 {
+        display: inline-block;
+        width: 105px;
+        margin-left: 5px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .sc_str_2 > span {
+        display: inline-block;
+        width: 60px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .sc_str_2 > redact {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 20px;
+        font-style: italic;
+        text-decoration: underline;
+        color: #32648B;
+        cursor: pointer;
+        visibility: hidden;
+    }
+    .sc_str_2 > redact:hover {
+        text-decoration: none;
+    }
+
+#tire_count {
+    margin-top: 10px;
+}
+    #tire_count_str {
+        font-size: 0;
+    }
+        #tire_count_str > span {
+            display: inline-block;
+            font-weight: bold;
+            width: 155px;
+            height: 21px;
+            line-height: 21px;
+        }
+        #tire_count_str > span1 {
+            display: inline-block;
+            font-weight: bold;
+            width: 32px;
+            text-align: right;
+            height: 21px;
+            line-height: 21px;
+            font-size: 14px;
+        }
+    .tire_count_str {
+        font-size: 0;
+    }
+        .tire_count_str > circle {
+            margin-top: 4px;
+        }
+        .tire_count_str > span {
+            width: 140px;
+            height: 21px;
+            line-height: 21px;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .tire_count_str > span.active {
+            border-bottom: 1px dotted white;
+        }
+        .tire_count_str > span1 {
+            width: 32px;
+            text-align: right;
+            height: 21px;
+            line-height: 21px;
+            font-size: 14px;
+            vertical-align: top;
+            display: inline-block;
+        }
+        .tire_count_str > rightcol {
+            display: none;
+            margin-left: 14px;
+            width: 249px;
+        }
+            .tire_count_str > rightcol > block {
+                display: inline-block;
+                height: 14px;
+                background: #F4F4F4;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                padding: 1px;
+                padding-right: 5px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+                rightcol > cross {
+                    display: block;
+                    float: right;
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                    background-image: url(../../img/black_cross.png);
+                    background-size: cover;
+                    margin-top: 0;
+                }
+                block > count {
+                    width: 23px;
+                    height: 14px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    display: inline-block;
+                }
+                block > name {
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #000000;
+                    margin-left: 2px;
+                    display: inline-block;
+                }
+
+
+
+
+

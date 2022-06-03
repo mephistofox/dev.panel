@@ -1,0 +1,20 @@
+<div id = "sales_head">
+    <div id = "sales_head_settings" onClick = "windowColumnSettings(6);"></div>
+    %OTL%
+    <div id = "sales_head_button" onClick = "windowSaleAdd();"></div>
+    %BASES%
+    <div id = "sales_head_dates">
+        <item data = '1' onClick = 'salesDateTypeChange(this);'>Месяц</item>
+        <item data = '2' onClick = 'salesDateTypeChange(this);'>Вчера</item>
+        <item id = "button_today" data = '3' onClick = 'salesDateTypeChange(this);'>Сегодня</item>
+        <div id = "calendar_1"></div>
+        <span>—</span>
+        <div id = "calendar_2"></div>
+    </div>
+</div>
+<div id = "sales_body">
+    <div id = "sales_body_head">
+        %HEAD%
+    </div>
+    <div id = "sales_body_list"></div>
+</div>
